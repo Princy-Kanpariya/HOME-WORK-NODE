@@ -10,7 +10,7 @@ const musicSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        duration: { //movie type
+        duration: {
             type: Number,
             trim: true,
         },

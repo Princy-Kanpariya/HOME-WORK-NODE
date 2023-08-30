@@ -15,11 +15,8 @@ const createStationary = async (reqBody) => {
  * @param {object} options
  * @returns {Promise<Stationary>}
  */
-const getStationaryList = async (filter, options) => {
-  const skip = (Number(options.page || 1) - 1) * Number(options.limit || 10);
-
-  return Stationary.find(filter).skip(skip).limit(options.limit).select("-password");
-    // return Stationary.find({$or : [{is_active: true}]})
+const getStationaryList = async () => {
+    return Stationary.find({$or : [{is_active: true}]})
 };
 
 /**

@@ -15,11 +15,8 @@ const createJwellery = async (reqBody) => {
  * @param {object} options
  * @returns {Promise<Jwellery>}
  */
-const getJwelleryList = async (filter, options) => {
-  const skip = (Number(options.page || 1) - 1) * Number(options.limit || 10);
-
-  return Jwellery.find(filter).skip(skip).limit(options.limit).select("-password");
-    // return Jwellery.find({$or : [{is_active: true}]})
+const getJwelleryList = async () => {
+    return Jwellery.find({$or : [{is_active: true}]})
 };
 
 /**

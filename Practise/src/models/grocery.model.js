@@ -10,7 +10,7 @@ const grocerySchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        category: { //movie type
+        category: {
             type: String,
             trim: true,
         },

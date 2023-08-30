@@ -15,11 +15,8 @@ const createSchool = async (reqBody) => {
  * @param {object} options
  * @returns {Promise<School>}
  */
-const getSchoolList = async (filter, options) => {
-  const skip = (Number(options.page || 1) - 1) * Number(options.limit || 10);
-
-  return School.find(filter).skip(skip).limit(options.limit).select("-password");
-    // return School.find({$or : [{is_active: true}]})
+const getSchoolList = async () => {
+    return School.find({$or : [{is_active: true}]})
 };
 
 /**

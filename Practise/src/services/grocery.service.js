@@ -15,11 +15,8 @@ const createGrocery = async (reqBody) => {
  * @param {object} options
  * @returns {Promise<Grocery>}
  */
-const getGroceryList = async (filter, options) => {
-  const skip = (Number(options.page || 1) - 1) * Number(options.limit || 10);
-
-  return Grocery.find(filter).skip(skip).limit(options.limit).select("-password");
-    // return Grocery.find({$or : [{is_active: true}]})
+const getGroceryList = async () => {
+    return Grocery.find({$or : [{is_active: true}]})
 };
 
 /**

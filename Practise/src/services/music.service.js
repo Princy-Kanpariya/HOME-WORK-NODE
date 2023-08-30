@@ -15,11 +15,8 @@ const createMusic = async (reqBody) => {
  * @param {object} options
  * @returns {Promise<Music>}
  */
-const getMusicList = async (filter, options) => {
-  const skip = (Number(options.page || 1) - 1) * Number(options.limit || 10);
-
-  return Music.find(filter).skip(skip).limit(options.limit).select("-password");
-    // return Music.find({$or : [{is_active: true}]})
+const getMusicList = async () => {
+    return Music.find({$or : [{is_active: true}]})
 };
 
 /**
