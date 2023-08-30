@@ -4,6 +4,6 @@ const { favListController } = require("../../controllers");
 const router = express.Router();
 
 /* Get all list */
-router.get("/all-list", favListController.getAllList);
+router.get("/favlist", favListController.getAllList);
 
 module.exports = router;

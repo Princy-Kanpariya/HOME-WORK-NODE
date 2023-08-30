@@ -5,12 +5,6 @@ const createBook = async (req, res) => {
   try {
     const reqBody = req.body;
 
-// console.log(reqBody,'++++++++++++++++++++ reqBody.category');
-    // const userExists = await userService.getUserByEmail(reqBody.email);
-    // if (userExists) {
-    //   throw new Error("User already created by this email!");
-    // }
-
     const book = await bookService.createBook(reqBody);
     if (!book) {
       throw new Error("Something went wrong, please try again or later!");

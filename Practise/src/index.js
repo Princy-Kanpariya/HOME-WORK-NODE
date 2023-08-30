@@ -31,7 +31,6 @@ app.use((req, res, next) => {
 // database connection
 connectDB()
 
-
 // server using http
 const server = http.createServer(app);
 

@@ -13,7 +13,7 @@ const {
 
       res.status(200).json({
         success: true,
-        message: "Get E-commers list successfully!",
+        message: "Get favslist list successfully!",
         data: { userList, categoryList, productList },
       });
     } catch (error) {
