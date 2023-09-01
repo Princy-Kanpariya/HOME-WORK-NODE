@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const config = require("../config/config");
 
 const stationarySchema = new mongoose.Schema(
     {
@@ -21,6 +22,10 @@ const stationarySchema = new mongoose.Schema(
         item_category: {
             type: String,
             trim: true,
+        },
+        book: {
+            type: mongoose.Types.ObjectId,
+            ref: "book",
         },
         is_active: {
             type: Boolean,

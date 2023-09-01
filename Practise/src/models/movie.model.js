@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const config = require("../config/config");
 
 const movieSchema = new mongoose.Schema(
     {
@@ -25,6 +26,10 @@ const movieSchema = new mongoose.Schema(
         awards: {
             type: Number,
             trim: true,
+        },
+        music: {
+            type: mongoose.Types.ObjectId,
+            ref: "music",
         },
         is_active: {
             type: Boolean,

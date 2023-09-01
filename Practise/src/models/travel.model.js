@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const config = require("../config/config");
 
 const travelSchema = new mongoose.Schema(
     {
@@ -27,6 +28,14 @@ const travelSchema = new mongoose.Schema(
         transportation: {
             type: String,
             trim: true,
+        },
+        bus: {
+            type: mongoose.Types.ObjectId,
+            ref: "bus",
+        },
+        hotel: {
+            type: mongoose.Types.ObjectId,
+            ref: "hotel",
         },
         is_active: {
             type: Boolean,

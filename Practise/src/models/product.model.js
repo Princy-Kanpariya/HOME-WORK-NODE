@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const config = require("../config/config");
 
 const productSchema = new mongoose.Schema(
     {
@@ -9,6 +10,10 @@ const productSchema = new mongoose.Schema(
         product_name: {
             type: String,
             trim: true,
+        },
+        category: {
+            type: mongoose.Types.ObjectId,
+            ref: "category",
         },
         is_active: {
             type: Boolean,

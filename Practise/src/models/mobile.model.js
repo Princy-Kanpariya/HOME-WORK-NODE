@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const config = require("../config/config");
 
 const mobileSchema = new mongoose.Schema(
     {
@@ -53,6 +54,10 @@ const mobileSchema = new mongoose.Schema(
         ratings: {
             type: Number,
             trim: true,
+        },
+        user: {
+            type: mongoose.Types.ObjectId,
+            ref: "user",
         },
         is_active: {
             type: Boolean,

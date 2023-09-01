@@ -1,9 +1,11 @@
 token
 
-find
+routes and models
 
-auth.js
+auth.js understand
 
-$or in all
+cron.js understand
 
-cron.js
+jwt
+
+aggrigation pipline
