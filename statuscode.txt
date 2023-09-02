@@ -1,0 +1,17 @@
+200 - ok
+201 - created
+202 - accepted
+207 - multi status
+301 - move permenantly
+302 - found
+400 - bad request
+401 - unauthorized
+402 - payment required
+403 - forbidden
+404 - page not found
+405 - method not allowed
+406 - not acceptable
+422 - unprocessable entity
+500 - internal server error
+502 - bad gateway
+503 - service unavailable
