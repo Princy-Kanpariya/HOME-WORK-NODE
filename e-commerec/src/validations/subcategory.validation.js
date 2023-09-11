@@ -5,7 +5,7 @@ const createSubcategory = {
     body: Joi.object().keys({
       subcategory_name: Joi.string().required().trim(),
       subcategory_id: Joi.number().integer().required(),
-      status: Joi.string().required().trim(),
+      stock: Joi.string().required().trim(),
       subcategory_desc: Joi.string().required().trim(),
     }),
   };

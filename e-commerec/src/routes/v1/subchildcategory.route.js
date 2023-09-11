@@ -1,6 +1,6 @@
 const express = require("express");
 const { subchildcategoryValidation } = require("../../validations");
-const { subchildcategoryController } = require("../../controllers");
+const { subchildcategoryController } = require("../../controller");
 const validate = require("../../middlewares/validate");
 
 const router = express.Router();
@@ -37,6 +37,6 @@ router.put(
 router.delete(
   "/delete-subchildcategory/:subchildcategoryId",
   validate(subchildcategoryValidation.getDetails),
-  subchildcategoryController.deleteSubchilcategory
+  subchildcategoryController.deleteSubchildcategory
 );
 module.exports = router;

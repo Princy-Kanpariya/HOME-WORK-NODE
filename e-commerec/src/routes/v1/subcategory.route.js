@@ -1,6 +1,6 @@
 const express = require("express");
 const { subcategoryValidation } = require("../../validations");
-const { subcategoryController } = require("../../controllers");
+const { subcategoryController } = require("../../controller");
 const validate = require("../../middlewares/validate");
 
 const router = express.Router();

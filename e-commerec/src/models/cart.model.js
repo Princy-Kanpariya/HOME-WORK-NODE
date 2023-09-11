@@ -7,8 +7,8 @@ const cartSchema = new mongoose.Schema(
             type: Number,
             trim: true,
         },
-        status: {
-            type: boolean,
+        stock: {
+            type: String,
             trim: true,
         },
         price: {

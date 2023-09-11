@@ -5,7 +5,7 @@ const createCategory = {
     body: Joi.object().keys({
       category_name: Joi.string().required().trim(),
       category_id: Joi.number().integer().required(),
-      status: Joi.string().required().trim(),
+      stock: Joi.string().required().trim(),
       category_desc: Joi.string().required().trim(),
     }),
   };

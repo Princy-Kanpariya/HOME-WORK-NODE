@@ -4,7 +4,7 @@ const Joi = require("joi");
 const createOrder = {
     body: Joi.object().keys({
         Order_id: Joi.number().integer().required(),
-        status: Joi.string().required().trim(),
+        stock: Joi.string().required().trim(),
         price: Joi.number().integer().required(),
         total: Joi.number().integer().required(),
     }),

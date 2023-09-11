@@ -11,8 +11,8 @@ const subcategorySchema = new mongoose.Schema(
             type: Number,
             trim: true,
         },
-        status: {
-            type: boolean,
+        stock: {
+            type: String,
             trim: true,
         },
         subcategory_desc: {
