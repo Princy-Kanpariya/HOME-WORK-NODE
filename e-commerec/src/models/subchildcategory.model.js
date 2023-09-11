@@ -19,6 +19,10 @@ const subchildcategorySchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        subcategory: {
+            type: mongoose.Types.ObjectId,
+            ref: "subcategory"
+        },
         is_active: {
             type: Boolean,
             default: true,

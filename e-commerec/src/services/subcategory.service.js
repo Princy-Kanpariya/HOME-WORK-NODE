@@ -16,7 +16,7 @@ const createSubcategory = async (reqBody) => {
  * @returns {Promise<Subcategory>}
  */
 const getSubcategoryList = async () => {
-  return Subcategory.find({$or : [{is_active: true}]})
+  return Subcategory.find().populate("category");
 };
 
 /**

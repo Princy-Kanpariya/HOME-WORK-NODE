@@ -16,7 +16,7 @@ const createProduct = async (reqBody) => {
  * @returns {Promise<Product>}
  */
 const getProductList = async () => {
-  return Product.find({$or : [{is_active: true}]})
+  return Product.find().populate("subchildcategory");
 };
 
 /**

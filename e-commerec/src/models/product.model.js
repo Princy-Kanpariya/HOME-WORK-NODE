@@ -10,9 +10,9 @@ const productSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        category: {
+        subchildcategory: {
             type: mongoose.Types.ObjectId,
-            ref: "category",
+            ref: "subchildcategory",
         },
         is_active: {
             type: Boolean,
