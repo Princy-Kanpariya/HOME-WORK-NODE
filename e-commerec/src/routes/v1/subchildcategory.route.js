@@ -8,22 +8,22 @@ const router = express.Router();
 // create subchildcategory
 router.post(
   "/create-subchildcategory",
-  validate(subchildcategoryValidation.createsubchildCategory),
-  subchildcategoryController.createsubchildCategory
+  validate(subchildcategoryValidation.createSubchildcategory),
+  subchildcategoryController.createSubchildcategory
 );
 
 // Get subchildcategory list
 router.get(
   "/list",
-  validate(subchildcategoryValidation.getsubchildCategoryList),
-  subchildcategoryController.getsubchildCategoryList
+  validate(subchildcategoryValidation.getSubchildcategoryList),
+  subchildcategoryController.getSubchildcategoryList
 );
 
 // Get subchildcategory details by id
 router.get(
   "/get-details/:subchildcategoryId",
   validate(subchildcategoryValidation.getDetails),
-  subchildcategoryController.getsubchildCategoryDetails
+  subchildcategoryController.getSubchildcategoryDetails
 );
 
 // subchildcategory details update by id
@@ -37,6 +37,6 @@ router.put(
 router.delete(
   "/delete-subchildcategory/:subchildcategoryId",
   validate(subchildcategoryValidation.getDetails),
-  subchildcategoryController.deletesubchildCategory
+  subchildcategoryController.deleteSubchilcategory
 );
 module.exports = router;
