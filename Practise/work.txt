@@ -1,6 +1,13 @@
 token
 
-routes and models
+apply authantication
+
+routes and models ref and populate
+and also make some needed models
+
+image
+
+make some frontend view
 
 auth.js understand
 

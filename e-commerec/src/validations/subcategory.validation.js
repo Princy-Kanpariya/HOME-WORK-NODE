@@ -1,15 +1,16 @@
 const Joi = require("joi");
 
-// create product
-const createProduct = {
+// create subcategory
+const createSubcategory = {
     body: Joi.object().keys({
-      product_id: Joi.number().integer().required(),
-      product_name: Joi.string().required().trim(),
+      subcategory_name: Joi.string().required().trim(),
+      subcategory_id: Joi.number().integer().required(),
+      status: Joi.string().required().trim(),
+      subcategory_desc: Joi.string().required().trim(),
     }),
   };
-
-// Get product list
-const getProductList = {
+// Get subcategory list
+const getSubcategoryList = {
   query: Joi.object().keys({
       search: Joi.string().trim().allow(""),
       sortBy: Joi.string().trim().allow(""),
@@ -18,17 +19,17 @@ const getProductList = {
   }),
 };
 
-// Get product details by id
+// Get subcategory details by id
 const getDetails = {
   params: Joi.object().keys({
-      productId: Joi.string().required().trim(),
+      subcategoryId: Joi.string().required().trim(),
   }),
 };
 
-// product details update by id
+// subcategory details update by id
 const updateDetails = {
   params: Joi.object().keys({
-      productId: Joi.string().required().trim(),
+      subcategoryId: Joi.string().required().trim(),
   }),
   body: Joi.object().keys({
       first_name: Joi.string().trim(),
@@ -37,8 +38,8 @@ const updateDetails = {
 };
 
 module.exports = {
-  createProduct,
+  createSubcategory,
   getDetails,
-  getProductList,
+  getSubcategoryList,
   updateDetails,
 };

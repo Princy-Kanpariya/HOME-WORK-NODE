@@ -8,7 +8,7 @@ const createCategory = {
     }),
   };
 
-// GEt category list
+// Get category list
 const getCategoryList = {
   query: Joi.object().keys({
       search: Joi.string().trim().allow(""),

@@ -5,7 +5,7 @@ const validate = require("../../middlewares/validate");
 
 const router = express.Router();
 
-// create category
+// create user
 router.post(
   "/create-category",
   validate(categoryValidation.createCategory),
