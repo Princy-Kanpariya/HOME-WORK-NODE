@@ -1,8 +1,8 @@
 module.exports.User = require("./user.model");
+module.exports.Token = require("./token.model");
 module.exports.Category = require("./category.model");
 module.exports.Product = require("./product.model");
 module.exports.Book = require("./book.model");
-// module.exports.Token = require("./token.model");
 module.exports.Bus = require("./bus.model");
 module.exports.Hotel = require("./hotel.model");
 module.exports.Stationary = require("./stationary.model");

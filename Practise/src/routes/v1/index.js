@@ -1,5 +1,5 @@
 const express = require("express");
-// const tokenRoutes = require("./token.route");
+const tokenRoute = require("./token.route");
 const userRoute = require("./user.route");
 const categoryRoute = require("./category.route");
 const productRoute = require("./product.route");
@@ -21,6 +21,7 @@ const router = express.Router();
 
 // router.use("ex:/user", userRoute);
 router.use("/user", userRoute);
+router.use("/token", tokenRoute);
 router.use("/category", categoryRoute);
 router.use("/product", productRoute);
 router.use("/book", bookRoute);
